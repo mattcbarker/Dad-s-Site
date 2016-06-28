@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html language="en" ng-app="paulSite">
+  <head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+      <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/mainPage.js"></script>
+    <title>Paul's Site</title>
+  </head>
+
+  <body ng-controller="tabController as tc">
+    <div><!--Menu-->
+      <input type="button" value="Home" ng-click="tc.setTab(0)"></input>
+      <input type="button" value="About" ng-click="tc.setTab(1)"></input>
+      <input type="button" value="Gallery" ng-click="tc.setTab(2)"></input>
+      <input type="button" value="Blog" ng-click="tc.setTab(3)"></input>
+      <input type="button" value="Contact" ng-click="tc.setTab(4)"></input>
+    </div>
+    <div class="container"><!--Content-->
+      <div ng-show="tc.tab == 0"><img-carousel></img-carousel></div>
+      <div ng-show="tc.tab == 1"><about-page></about-page></div>
+      <div ng-show="tc.tab == 2">Gallery</div>
+      <div ng-show="tc.tab == 3">Blog</div>
+      <div ng-show="tc.tab == 4"><contact-page></contact-page></div>
+    </div>
+
+  <body>
+</html>
